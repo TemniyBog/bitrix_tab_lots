@@ -17,7 +17,7 @@ function check_permissions()
     $entityTypeId = CCrmOwnerType::Deal; // айди сущности - Сделка
 
     // Получаем айди сделки
-    $deal_id = $_POST['PARAMS']['DEAL_ID'];
+    $deal_id = $_POST['PARAMS']['DEAL_ID'] ? null : 0;
 
     global $USER;
     $user_id = $USER->GetID();
